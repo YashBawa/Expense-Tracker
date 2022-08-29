@@ -1,0 +1,26 @@
+
+.content{
+    background-image:linear-gradient(to right,blue,green);
+}
+h1,h3{
+    font-family:'Permanent Marker';
+    text-align: center;
+    color:black;
+}
+.span{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+button {
+    background-color: aqua;
+    border-radius: 20%;
+    float:right;
+    align-items: center;
+    padding: auto;
+    margin-top: -0.9mm;
+    border-color:wheat;
+}
+.save {
+    background-color: rgb(255, 162, 0);
+    margin-top: 5%;
+    
+}
