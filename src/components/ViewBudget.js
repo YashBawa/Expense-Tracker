@@ -9,7 +9,7 @@ export default function ViewBudget(props) {
   return (
     <div>
        <span style={design} >Budget:${props.budget}<button 
-       onClick={props.handleditclick}
+       onClick={() => props.handleditclick()}
        type='button'
        >
        Edit

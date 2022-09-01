@@ -5,7 +5,7 @@ import ViewBudget from './ViewBudget';
 
 export default function Budget() {
   const {budget,dispatch} = useContext(AppContext);
-  const {edit,setedit}=useState(false);
+  const [edit,setedit]=useState(false);
 
   // function for handling click 
   const handleditclick = ()=>{
@@ -26,7 +26,7 @@ export default function Budget() {
       <div className='alert alert-success '>
       {edit?(<Editbudget handlesaveclick={handlesaveclick} budget={budget}/>
       ):(
-      <ViewBudget handleditclick={handleditclick} budget={budget}/>
+      <ViewBudget handleditclick={() => {handleditclick()}} budget={budget}/>
         )}
     </div>
   );
