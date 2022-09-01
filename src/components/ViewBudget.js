@@ -4,10 +4,16 @@ const design = {
     borderRadius :'5%',
     padding:'5px'
   }
+
 export default function ViewBudget(props) {
   return (
     <div>
-       <span style={design} >Budget:${props.budget}<button onClick={props.handleditclick}>Edit</button></span> 
+       <span style={design} >Budget:${props.budget}<button 
+       onClick={props.handleditclick}
+       type='button'
+       >
+       Edit
+       </button></span> 
     </div>
   );
 };

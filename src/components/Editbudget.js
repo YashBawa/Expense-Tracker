@@ -1,6 +1,7 @@
-import React ,{useState} from 'react'
+import React ,{useState} from 'react';
+
 const Editbudget=(props)=>{
-    const [data,setdata]=useState(false);
+    const [value,setdata]=useState(props.budget);
 
   return (
     <div>
@@ -9,13 +10,13 @@ const Editbudget=(props)=>{
 				type='number'
 				class='form-control mr-3'
 				id='name'
-				value={data}
+				value={value}
 				onChange={(event) => setdata(event.target.value)}
 			/>
 			<button
 				type='button'
 				class='btn btn-primary'
-				onClick={() => props.handlesaveclick(data)}
+				onClick={() => props.handlesaveclick(value)}
 			>
 				Save
 			</button>

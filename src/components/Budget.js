@@ -13,23 +13,21 @@ export default function Budget() {
   };
 
   // another function for saving the changed values 
-  const handlesaveclick = (data) => {
+  const handlesaveclick = (value) => {
     dispatch ({
         type:'SET_BUDGET',
-        payload:data,
+        payload:value,
       }
-    )
+    );
     setedit(false);
     };
 
   return(
-    <div>
       <div className='alert alert-success '>
       {edit?(<Editbudget handlesaveclick={handlesaveclick} budget={budget}/>
       ):(
       <ViewBudget handleditclick={handleditclick} budget={budget}/>
         )}
-    </div>
     </div>
   );
 }

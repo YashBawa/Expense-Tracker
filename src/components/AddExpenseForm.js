@@ -5,15 +5,16 @@ const AddExpenseForm=()=>{
     const {dispatch} = useContext(AppContext);
     const [name,setName]=useState('');
     const [cost,setCost]=useState('');
+
     const onSubmit = (event)=>{
         event.preventDefault ();
         // alert ("name"+" "+name+"Cost"+" "+cost);
 
         const expense = {
             id:uuidv4(),
-            name:name,
+            name,
             cost:parseInt(cost),
-        }
+        };
 
         dispatch({
             type:'add-expense',
@@ -22,10 +23,10 @@ const AddExpenseForm=()=>{
 
         setName('');
 		setCost('');
-    }
+    };
     const design={
         color:'black'
-    }
+    };
     return (
         <form onSubmit={onSubmit}>
             <div className='row'>
@@ -42,7 +43,7 @@ const AddExpenseForm=()=>{
                 <div className='col-sm' style={design}>
                     <label for='cost' >Cost</label>
                     <input required='required' 
-                    type='text' 
+                    type='number' 
                     className='form-control' 
                     id='cost'
                     value={cost}

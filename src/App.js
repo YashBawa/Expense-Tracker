@@ -12,14 +12,16 @@ import {AppProvider} from "./context/AppContext";
   integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
   crossorigin="anonymous"
 ></link>;
-
+const design = {
+  marginTop:50
+}
 export default function App() {
   return (
     <div className="content">
     <AppProvider >
       <div className="container">
-        <h1 className="mt-3 font-family: 'Oswald'"><u>Expense Tracker</u></h1>
-        <div className="row mt-3">
+        <h1 className="mt-3 font-family: 'Oswald'" style={design}><u>Expense Tracker</u></h1>
+        <div className="row mt-15" style={design}>
           <div className="col-sm-4">
             <Budget />
           </div>
@@ -30,8 +32,8 @@ export default function App() {
             <ExpenseTotal />
           </div>
         </div>
-        <h3 class="mt-3"><u>Expenses</u></h3>
-        <div class="row ">
+        <h3 class="mt-5" style={design}><u>Expenses</u></h3>
+        <div class="row " style={design}>
           <div class="col-sm-8 d-flex justify-content:center px-5">
             <ExpensesList />
           </div>
@@ -42,7 +44,9 @@ export default function App() {
             <AddExpenseForm />
           </div>
         </div>
-        {/* footer to be added */}
+        <div>
+          {/* <Footer /> */}
+        </div>
       </div>
     </AppProvider>
     </div>

@@ -1,6 +1,7 @@
 
 .content{
     background-image:linear-gradient(to right,blue,green);
+    height: auto;
 }
 h1,h3{
     font-family:'Permanent Marker';
